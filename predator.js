@@ -1,4 +1,4 @@
-class Predator{
+class Predator {
     constructor(x, y) {
         this.x = x
         this.y = y
@@ -20,8 +20,8 @@ class Predator{
         ];
     }
 
-//զարգացնում ենք chooseCell-ը տալով արդեն 2 արգումենտ որպեսզի փնտրի 2 կերպար
-    chooseCell(char,char1) {
+    //զարգացնում ենք chooseCell-ը տալով արդեն 2 արգումենտ որպեսզի փնտրի 2 կերպար
+    chooseCell(char, char1) {
         this.getNewCoordinates()
         let found = []
 
@@ -95,7 +95,7 @@ class Predator{
 
 
     eat() {
-        var emptyCells = this.chooseCell(1,2)// արդեն մեր chooseCell-Ը կարող է փնտրել 2 կերպար
+        var emptyCells = this.chooseCell(1, 2)// արդեն մեր chooseCell-Ը կարող է փնտրել 2 կերպար
         var newCell = random(emptyCells)
 
         if (newCell) {
@@ -103,7 +103,7 @@ class Predator{
 
             var newX = newCell[0]
             var newY = newCell[1]
-            
+
             matrix[newY][newX] = matrix[this.y][this.x]
 
             matrix[this.y][this.x] = 0
@@ -111,37 +111,37 @@ class Predator{
 
             this.x = newX
             this.y = newY
-// արդեն կարող ենք ջնջել և խոտերին և խոտակերերին
-            for(var i in grassArr){
+            // արդեն կարող ենք ջնջել և խոտերին և խոտակերերին
+            for (var i in grassArr) {
                 console.log(grassArr);
-                if (newX == grassArr[i].x  && newY == grassArr[i].y ) {
-                            grassArr.splice(i, 1)
-                               break
+                if (newX == grassArr[i].x && newY == grassArr[i].y) {
+                    grassArr.splice(i, 1)
+                    break
                 }
             }
 
-            for(var i in grassEaterArr){
-                if (newX == grassEaterArr[i].x  && newY == grassEaterArr[i].y ) {
-                            grassEaterArr.splice(i, 1)
-                               break
+            for (var i in grassEaterArr) {
+                if (newX == grassEaterArr[i].x && newY == grassEaterArr[i].y) {
+                    grassEaterArr.splice(i, 1)
+                    break
                 }
             }
 
-        }else{
+        } else {
             this.move()
         }
     }
 
-    die(){
-        matrix[this.y][this.x]  =  0
+    die() {
+        matrix[this.y][this.x] = 0
 
-           for(var i in predatorArr){
-                    if(this.x ==  predatorArr[i].x &&  this.y == predatorArr[i].y){
+        for (var i in predatorArr) {
+            if (this.x == predatorArr[i].x && this.y == predatorArr[i].y) {
 
-                            predatorArr.splice(i,1)
-                             break
-                    }
-           }
+                predatorArr.splice(i, 1)
+                break
+            }
+        }
     }
 
 }

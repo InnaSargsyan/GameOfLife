@@ -97,7 +97,7 @@ class GrassEater {
 
             var newX = newCell[0]
             var newY = newCell[1]
-            
+
             matrix[newY][newX] = matrix[this.y][this.x]
 
             matrix[this.y][this.x] = 0
@@ -106,30 +106,30 @@ class GrassEater {
             this.x = newX
             this.y = newY
 
-            for(var i in grassArr){
+            for (var i in grassArr) {
                 // console.log(grassArr);
-                if (newX == grassArr[i].x  && newY == grassArr[i].y ) {
-                            grassArr.splice(i, 1)
-                               break
+                if (newX == grassArr[i].x && newY == grassArr[i].y) {
+                    grassArr.splice(i, 1)
+                    break
                 }
             }
 
 
-        }else{
+        } else {
             this.move()
         }
     }
 
-    die(){
-        matrix[this.y][this.x]  =  0
+    die() {
+        matrix[this.y][this.x] = 0
 
-           for(var i in grassEaterArr){
-                    if(this.x ==  grassEaterArr[i].x &&  this.y == grassEaterArr[i].y){
+        for (var i in grassEaterArr) {
+            if (this.x == grassEaterArr[i].x && this.y == grassEaterArr[i].y) {
 
-                             grassEaterArr.splice(i,1)
-                             break
-                    }
-           }
+                grassEaterArr.splice(i, 1)
+                break
+            }
+        }
     }
 
 
