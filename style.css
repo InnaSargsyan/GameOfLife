@@ -27,7 +27,7 @@
 body{
     background: rgb(54, 128, 189);
     box-shadow: 0 -200px 100px -120px rgb(130, 230, 172)#7B68EE inset;
-    animation: background 3s infinite alternate;
+    animation: background 7s infinite alternate;
 
 }
 
