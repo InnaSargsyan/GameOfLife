@@ -9,7 +9,7 @@
 .title h1{
     height: auto;
     width: 1000px;
-    color: rgb(32, 88, 72);
+    color: rgb(80 42 173);
     font-family: unset;
 }
 
@@ -25,7 +25,7 @@
 }
 
 body{
-    background: rgb(54, 128, 189);
+    background: rgb(73 130 178 / 86%);
     box-shadow: 0 -200px 100px -120px rgb(130, 230, 172)#7B68EE inset;
     animation: background 7s infinite alternate;
 

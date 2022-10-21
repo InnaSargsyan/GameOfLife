@@ -146,15 +146,15 @@ class Important extends LivingCreature{
         }
     }
 
-    die() {
-        matrix[this.y][this.x] = 0
+    // die() {
+    //     matrix[this.y][this.x] = 0
 
-        for (var i in importantArr) {
-            if (this.x == importantArr[i].x && this.y == importantArr[i].y) {
+    //     for (var i in importantArr) {
+    //         if (this.x == importantArr[i].x && this.y == importantArr[i].y) {
 
-                importantArr.splice(i, 1)
-                break
-            }
-        }
-    }
+    //             importantArr.splice(i, 1)
+    //             break
+    //         }
+    //     }
+    // }
 }

@@ -294,12 +294,12 @@ function draw() {
               importantArr[i].eat()
           }
       }
-      if (grassArr == 0 && grassEaterArr == 0 && predatorArr == 0) {
-          var x = 0
-          var y = 0
-          matrix[y][x] = 5
-          importantArr.push(new Important(x, y))
-      }
+     //  if (grassArr == 0 && grassEaterArr == 0 && predatorArr == 0) {
+     //      var x = 0
+     //      var y = 0
+     //      matrix[y][x] = 5
+     //      importantArr.push(new Important(x, y))
+     //  }
       if (matrix[0][0] == 5 && kindArr == 0 && grassEaterArr == 0) {
           let x = 0
           let y = 0
