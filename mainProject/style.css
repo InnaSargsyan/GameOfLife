@@ -1,0 +1,192 @@
+
+.title{
+    height: 50px ;
+    width: 1000px;
+    display: flex;
+    margin-bottom: 40px;
+    margin-left: 35%;
+}
+.title h1{
+    height: auto;
+    width: 1000px;
+    color: rgb(80 42 173);
+    font-family: unset;
+}
+
+.title a{
+    height: 50px;
+    width: 100px;
+    color: white;
+    font-size: 25px; 
+    text-decoration: none;
+    margin-left: 2px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+body{
+    background: rgb(73 130 178 / 86%);
+    box-shadow: 0 -200px 100px -120px rgb(130, 230, 172) #7B68EE inset;
+    animation: background 7s infinite alternate;
+
+}
+
+@keyframes background {
+    50% {
+      background:#FFC0CB;
+      box-shadow: 0 -200px 100px -100px   #7B68EE inset;
+    }
+  }
+
+.game{
+    height: 45px;
+    width: 500px;
+    margin-left: 500px;
+    margin-top: 25px;
+    padding: 5px;
+    border-radius: 50px;
+    border-style: solid;
+    border-color: rgb(12, 91, 105);
+    background-color: rgb(38, 136, 143);
+}
+
+.game a{
+    padding: 10px;
+}
+
+canvas{
+    margin-left: 20%;
+    border-radius: 50px;
+}
+
+
+.grass h1 {
+    text-align: center;
+    color: rgb(241, 223, 237);
+}
+
+
+.grassEater h1 {
+    text-align: center;
+    color: rgb(241, 223, 237);
+}
+
+.predator h1 {
+    text-align: center;
+    color: rgb(241, 223, 237);
+}
+
+.kind h1 {
+    text-align: center;
+    color: rgb(241, 223, 237);
+}
+
+.queen h1 {
+    text-align: center;
+    color: rgb(241, 223, 237);
+}
+
+
+.grassEater p{
+    font-size: 20px;
+    text-align: center;
+    color: rgb(241, 223, 237);
+}
+
+.grass p{
+    font-size: 20px;
+    text-align: center;
+    color: rgb(241, 223, 237);
+}
+
+.predator p{
+    font-size: 20px;
+    text-align: center;
+    color: rgb(241, 223, 237);
+}
+
+.kind p{
+    font-size: 20px;
+    text-align: center;
+    color: rgb(241, 223, 237);
+}
+
+.queen p{
+    font-size: 20px;
+    text-align: center;
+    color: rgb(241, 223, 237);
+}
+
+.kerparner{
+    width: 1000px;
+    margin-left: 20%;
+}
+
+.grass{
+    margin-top: 15px;
+    border-radius: 50px;
+    border-style: solid;
+    border-color: rgb(12, 91, 105);
+}
+
+.grassEater{
+    margin-top: 15px;
+    border-radius: 50px;
+    border-style: solid;
+    border-color: rgb(12, 91, 105);
+}
+
+.predator{
+    margin-top: 15px;
+    border-radius: 50px;
+    border-style: solid;
+    border-color: rgb(12, 91, 105);
+}
+
+.kind{
+    margin-top: 15px;
+    border-radius: 50px;
+    border-style: solid;
+    border-color: rgb(38, 136, 143);
+}
+
+.queen{
+    margin-top: 15px;
+    border-radius: 50px;
+    border-style: solid;
+    border-color: rgb(12, 91, 105);
+    background-color: rgb(38, 136, 143);
+}
+
+.grass{
+    margin-top: 15px;
+    border-radius: 50px;
+    border-style: solid;
+    border-color: rgb(12, 91, 105);
+    background-color: rgb(38, 136, 143);
+}
+
+.grassEater{
+    margin-top: 15px;
+    border-radius: 50px;
+    border-style: solid;
+    border-color: rgb(12, 91, 105);
+    background-color: rgb(38, 136, 143);
+}
+
+.predator{
+    margin-top: 15px;
+    border-radius: 50px;
+    border-style: solid;
+    border-color: rgb(12, 91, 105);
+    background-color: rgb(38, 136, 143);
+}
+
+.kind{
+    margin-top: 15px;
+    border-radius: 50px;
+    border-style: solid;
+    border-color: rgb(12, 91, 105);
+    background-color: rgb(38, 136, 143);
+}
+
