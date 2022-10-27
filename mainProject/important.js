@@ -73,28 +73,28 @@ class Important extends LivingCreature{
     // }
 
 
-    move() {
-        var emptyCells = this.chooseCell(0)
-        var newCell = random(emptyCells)
+    // move() {
+    //     var emptyCells = this.chooseCell(0)
+    //     var newCell = random(emptyCells)
 
-        if (newCell && this.energy >= 0) {
+    //     if (newCell && this.energy >= 0) {
 
-            var newX = newCell[0]
-            var newY = newCell[1]
+    //         var newX = newCell[0]
+    //         var newY = newCell[1]
 
-            matrix[newY][newX] = matrix[this.y][this.x]
+    //         matrix[newY][newX] = matrix[this.y][this.x]
 
-            matrix[this.y][this.x] = 0
+    //         matrix[this.y][this.x] = 0
 
 
-            this.x = newX
-            this.y = newY
-        } else {
-            if (this.energy < 0) {
-                this.die()
-            }
-        }
-    }
+    //         this.x = newX
+    //         this.y = newY
+    //     } else {
+    //         if (this.energy < 0) {
+    //             this.die()
+    //         }
+    //     }
+    // }
 
 
     eat() {

@@ -53,7 +53,7 @@ class Kind extends LivingCreature{
         this.multiply++
         var emptyCells = this.chooseCell(0)
         var newCell = random(emptyCells)
-        console.log(kindArr.length);
+        // console.log(kindArr.length);
 
         if (newCell && this.multiply >= 16) {
 
@@ -112,7 +112,7 @@ class Kind extends LivingCreature{
     eat() {
         var emptyCells = this.chooseCell(2, 3)
         var newCell = random(emptyCells)
-        console.log(newCell);
+        // console.log(newCell);
         if (newCell) {
             this.energy++
 
@@ -128,7 +128,7 @@ class Kind extends LivingCreature{
             this.y = newY
 
             for (var i in predatorArr) {
-                console.log(predatorArr);
+                // console.log(predatorArr);
                 if (newX == predatorArr[i].x && newY == predatorArr[i].y) {
                     predatorArr.splice(i, 1)
                     break
