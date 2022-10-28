@@ -1,3 +1,7 @@
+
+var socket = io();
+
+
 function end() {
      matrix[7][2] = 3
      matrix[7][3] = 3
@@ -187,54 +191,54 @@ var importantArr = []
 //        EventListener-ner
 
 function keydown(evt) {
-     if (evt.key == "ArrowUp") 
-     ArrowUp : {
-          for (var y = 0; y < matrix.length; y++) {
-               for (var x = 0; x < matrix[y].length; x++) {
-                    if (matrix[y][x] == 5)  {
-                         matrix[y][x] = 0;
-                         matrix[y - 1][x] = 5;
-                         break ArrowUp;
+     if (evt.key == "ArrowUp")
+          ArrowUp: {
+               for (var y = 0; y < matrix.length; y++) {
+                    for (var x = 0; x < matrix[y].length; x++) {
+                         if (matrix[y][x] == 5) {
+                              matrix[y][x] = 0;
+                              matrix[y - 1][x] = 5;
+                              break ArrowUp;
+                         }
                     }
                }
           }
-     }
-     else if (evt.key == "ArrowDown") 
-     ArrowDown : {
-          for (var y = 0; y < matrix.length; y++) {
-               for (var x = 0; x < matrix[y].length; x++) {
-                    if (matrix[y][x] == 5) {
-                         matrix[y][x] = 0;
-                         matrix[y + 1][x] = 5;
-                         break ArrowDown;
+     else if (evt.key == "ArrowDown")
+          ArrowDown: {
+               for (var y = 0; y < matrix.length; y++) {
+                    for (var x = 0; x < matrix[y].length; x++) {
+                         if (matrix[y][x] == 5) {
+                              matrix[y][x] = 0;
+                              matrix[y + 1][x] = 5;
+                              break ArrowDown;
+                         }
                     }
                }
           }
-     }
-     else if (evt.key == "ArrowLeft") 
-     ArrowLeft : {
-          for (var y = 0; y < matrix.length; y++) {
-               for (var x = 0; x < matrix[y].length; x++) {
-                    if (matrix[y][x] == 5) {
-                         matrix[y][x] = 0;
-                         matrix[y][x - 1] = 5;
-                         break ArrowLeft;
+     else if (evt.key == "ArrowLeft")
+          ArrowLeft: {
+               for (var y = 0; y < matrix.length; y++) {
+                    for (var x = 0; x < matrix[y].length; x++) {
+                         if (matrix[y][x] == 5) {
+                              matrix[y][x] = 0;
+                              matrix[y][x - 1] = 5;
+                              break ArrowLeft;
+                         }
                     }
                }
           }
-     }
-     else if (evt.key == "ArrowRight") 
-     ArrowRight : {
-          for (var y = 0; y < matrix.length; y++) {
-               for (var x = 0; x < matrix[y].length; x++) {
-                    if (matrix[y][x] == 5) {
-                         matrix[y][x] = 0;
-                         matrix[y][x + 1] = 5;
-                         break ArrowRight;
+     else if (evt.key == "ArrowRight")
+          ArrowRight: {
+               for (var y = 0; y < matrix.length; y++) {
+                    for (var x = 0; x < matrix[y].length; x++) {
+                         if (matrix[y][x] == 5) {
+                              matrix[y][x] = 0;
+                              matrix[y][x + 1] = 5;
+                              break ArrowRight;
+                         }
                     }
                }
           }
-     }
 
 }
 
@@ -311,7 +315,7 @@ function draw() {
           grassEaterArr[j].eat()
 
      }
-     if (grassEaterArr == 0 && predatorArr == 0 && kindArr == 0 && importantArr == 0) {
+     if (grassEaterArr == 0 && predatorArr == 0 && kindArr == 0) {
           if (grassArr.length >= 625) {
 
                end()
@@ -354,11 +358,11 @@ function draw() {
      //      matrix[y][x] = 5
      //      importantArr.push(new Important(x, y))
      //  }
-     if (matrix[0][0] == 5 && kindArr == 0 && grassEaterArr == 0) {
-          let x = 0
-          let y = 0
-          grassArr.push(new Grass(x, y))
-     }
+     // if (matrix[0][0] == 5 && kindArr == 0 && grassEaterArr == 0) {
+     //      let x = 0
+     //      let y = 0
+     //      grassArr.push(new Grass(x, y))
+     // }
      if (grassArr != 0 && importantArr != 0 && kindArr == 0 && predatorArr == 0 && grassEaterArr == 0) {
           let x = 10
           let y = 10
@@ -371,21 +375,23 @@ function draw() {
      }
 
 
-     if(frameCount == 60){
+     if (frameCount % 60 == 0) {
           console.log(frameCount);
-
-
+          let grass = grassArr.length;
+          let grassEater = grassEaterArr.length;
+          let predator = predatorArr.length;
+          let kind = kindArr.length;
+          let important = importantArr.length;
+          let statistic = {
+               grass,
+               grassEater,
+               predator,
+               kind,
+               important
+          }
+          socket.emit("send static", statistic);
+          console.log(+ grass + ", " + "Խոտակեր - " + grassEater + ", " + "Գիշատիչ - " + predator + ", " + "Բարի կերպար - " + kind + ", " + "Թագուհի - " + important);
      }
+
 }
 
-
-
-
-// function keydown(evt) {
-//    console.log("You printed " + evt.key);
-// }
-// window.onkeydown = keydown;
-
-// ArrowDown
-// ArrowLeft
-// ArrowRight
