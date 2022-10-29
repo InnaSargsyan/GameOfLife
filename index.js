@@ -31,7 +31,8 @@ function main( statistic){
     const object = JSON.stringify(statistic);
    fs.writeFileSync("index.json", object);
   
-
 }
+
+
 
 

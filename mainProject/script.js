@@ -1,4 +1,6 @@
 
+var data1 = { a: 9, b: 20, c: 30, d: 8, e: 12 }
+var data2 = { a: 6, b: 16, c: 20, d: 14, e: 19, f: 12 }
 var socket = io();
 
 
@@ -390,7 +392,7 @@ function draw() {
                important
           }
           socket.emit("send static", statistic);
-          console.log(+ grass + ", " + "Խոտակեր - " + grassEater + ", " + "Գիշատիչ - " + predator + ", " + "Բարի կերպար - " + kind + ", " + "Թագուհի - " + important);
+          // console.log(+ grass + ", " + "Խոտակեր - " + grassEater + ", " + "Գիշատիչ - " + predator + ", " + "Բարի կերպար - " + kind + ", " + "Թագուհի - " + important);
      }
 
 }
