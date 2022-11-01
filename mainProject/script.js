@@ -392,7 +392,7 @@ function draw() {
                important
           }
           socket.emit("send static", statistic);
-          // console.log(+ grass + ", " + "Խոտակեր - " + grassEater + ", " + "Գիշատիչ - " + predator + ", " + "Բարի կերպար - " + kind + ", " + "Թագուհի - " + important);
+          console.log("Խոտ - "  + grass + ", " + "Խոտակեր - " + grassEater + ", " + "Գիշատիչ - " + predator + ", " + "Բարի կերպար - " + kind + ", " + "Թագուհի - " + important);
      }
 
 }

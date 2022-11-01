@@ -26,63 +26,7 @@
     <script src="kind.js"></script>
     <script src="important.js"></script>
     <script src="script.js"></script>
-    
 
-    <!-- <button onclick="update(data1)">Data 1</button>
-    <button onclick="update(data2)">Data 2</button> -->
-    <!-- <div id="my_dataviz"></div>
-
-
-    <script>
-        var width = 450
-            height = 450
-            margin = 40
-        var radius = Math.min(width, height) / 2 - margin
-        var svg = d3.select("#my_dataviz")
-          .append("svg")
-            .attr("width", width)
-            .attr("height", height)
-          .append("g")
-            .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-        
-        var color = d3.scaleOrdinal()
-          .domain(["a", "b", "c", "d", "e", "f"])
-          .range(d3.schemeDark2);
-        
-        function update(data) {
-        
-          var pie = d3.pie()
-            .value(function(d) {return d.value; })
-            .sort(function(a, b) { console.log(a) ; return d3.ascending(a.key, b.key);} ) 
-          var data_ready = pie(d3.entries(data))
-        
-          var u = svg.selectAll("path")
-            .data(data_ready)
-       
-          u
-            .enter()
-            .append('path')
-            .merge(u)
-            .transition()
-            .duration(1000)
-            .attr('d', d3.arc()
-              .innerRadius(0)
-              .outerRadius(radius)
-            )
-            .attr('fill', function(d){ return(color(d.data.key)) })
-            .attr("stroke", "white")
-            .style("stroke-width", "2px")
-            .style("opacity", 1)
-        
-          
-          u
-            .exit()
-            .remove()
-        
-        }
-        update(data1)
-        
-        </script> -->
 </body>
 
 </html>
